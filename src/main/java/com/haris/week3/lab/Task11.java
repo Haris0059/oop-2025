@@ -1,32 +1,33 @@
 package com.haris.week3.lab;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
+import java.util.Scanner;
 
 public class Task11 {
-    // Create a method that will receive an ArrayList<Integer> of five random numbers as a parameter.
-    // Sort the list in ascending order. Remove all even numbers from the list. Return updated ArrayList.
+    // Create an enum called Day with values: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+    // Implement a method isWeekend(Day day) that checks whether a given day is a weekend.
 
     public static void main(String[] args) {
-        Random random = new Random();
-        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 5; i++) {
-            int number = random.nextInt();
-            numbers.add(number);
+        try {
+            System.out.print("Enter a day of the week: ");
+            String inputDay = scanner.nextLine().toUpperCase();
+
+            Day day = Day.valueOf(inputDay);
+            isWeekend(day);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Enter a valid day of the week!");
         }
 
-        System.out.println(sortRemoveReturn(numbers));
+
+
     }
 
-    public static ArrayList<Integer> sortRemoveReturn(ArrayList<Integer> list) {
-        Collections.sort(list);
-        for (Integer number : list) {
-            if (number % 2 == 0) {
-                list.remove(number);
-            }
+    public static void isWeekend(Day day) {
+        if (day.equals(Day.SUNDAY) || day.equals(Day.SATURDAY)) {
+            System.out.println("It is the weekend!!");
+        } else {
+            System.out.println("It is a work day... ;(");
         }
-        return list;
     }
 }
