@@ -5,11 +5,6 @@ import java.util.ArrayList;
 public class Task1 {
 
     public static void main(String[] args) {
-        // Create an enum called MovieRating with values:
-        //G, PG, PG13, R.
-        //Implement two methods:
-        //addRating(ArrayList<MovieRating> ratings, MovieRating rating): Adds a rating to the list.
-        //showRatings(ArrayList<MovieRating> ratings): Displays all stored ratings.
 
         ArrayList<MovieRating> ratings = new ArrayList<>();
 
