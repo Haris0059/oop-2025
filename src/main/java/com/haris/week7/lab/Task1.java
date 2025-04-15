@@ -1,4 +1,4 @@
-package com.haris.week6.lab;
+package com.haris.week7.lab;
 
 class UniversityPerson {
     private String name;

@@ -1,4 +1,4 @@
-package com.haris.week6.lecture;
+package com.haris.week7.lecture;
 
 class Person {
     private String name;
