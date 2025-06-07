@@ -1,6 +1,0 @@
-package com.haris.week15.abstraction;
-
-public abstract class SubscriptionManager {
-
-    public abstract void renewSubscription(int months);
-}
